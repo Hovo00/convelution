@@ -1,5 +1,5 @@
 #include <iostream>
-#include "convolution.hpp"
+#include "convolution.h"
 
 // Library
 #include <opencv2/core/core.hpp>
@@ -17,7 +17,7 @@ int main()
                                             -1, 4, -1,
                                             0, -1, 0);
   std::cout << kernel << std::endl;
-  convolution obj(kernel, 1, type::Zero, 1);
+  convolution<uchar> obj(kernel, 1, type::Zero, 1);
 
   cv::Mat resImg = obj(img);
 
